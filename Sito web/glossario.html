@@ -19,6 +19,7 @@
             flex: 1;
         }
 
+        /* Box per le definizioni, inizialmente nascosti */
         .definition-box {
             display: none;
             background-color: #f8f9fa;
@@ -27,12 +28,14 @@
             border-radius: 5px;
             margin-top: 10px;
         }
+
+        /* Stile per i termini, che diventano sottolineati al passaggio del mouse */
         .term:hover {
             cursor: pointer;
             text-decoration: underline;
         }
 
-        /* Navbar style */
+        /* Stile per la navbar */
         .navbar {
             margin-bottom: 20px;
         }
@@ -48,10 +51,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <!-- Link alla Home -->
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <!-- Link alla pagina Socket -->
                     <li class="nav-item"><a class="nav-link" href="socket.html">Socket</a></li>
+                    <!-- Link alla pagina Modello OSI -->
                     <li class="nav-item"><a class="nav-link" href="osi.html">Modello OSI</a></li>
+                    <!-- Link alla pagina TCP vs UDP -->
                     <li class="nav-item"><a class="nav-link" href="tcp-udp.html">TCP vs UDP</a></li>
+                    <!-- Link alla pagina Glossario, che è attivo -->
                     <li class="nav-item"><a class="nav-link active" href="glossario.html">Glossario</a></li>
                 </ul>
             </div>
@@ -60,10 +68,14 @@
 
     <!-- Main Content -->
     <main class="container my-5">
+        <!-- Titolo principale della pagina -->
         <h1 class="text-center mb-4">Glossario</h1>
+        <!-- Descrizione introduttiva -->
         <p class="text-muted text-center">Clicca su un termine per visualizzare una breve definizione.</p>
+
+        <!-- Lista dei termini con le rispettive definizioni -->
         <div class="list-group">
-            <!-- Socket -->
+            <!-- Termini con la relativa definizione -->
             <div class="list-group-item">
                 <span class="term" onclick="toggleDefinition('socket-definition')"><strong>Socket:</strong></span>
                 <div id="socket-definition" class="definition-box">
@@ -71,7 +83,6 @@
                     <a href="socket.html">Approfondisci</a>.
                 </div>
             </div>
-            <!-- Modello OSI -->
             <div class="list-group-item">
                 <span class="term" onclick="toggleDefinition('osi-definition')"><strong>Modello OSI:</strong></span>
                 <div id="osi-definition" class="definition-box">
@@ -80,7 +91,6 @@
                     <a href="osi.html">Leggi di più</a>.
                 </div>
             </div>
-            <!-- TCP -->
             <div class="list-group-item">
                 <span class="term" onclick="toggleDefinition('tcp-definition')"><strong>TCP:</strong></span>
                 <div id="tcp-definition" class="definition-box">
@@ -88,7 +98,6 @@
                     <a href="tcp-udp.html">Leggi di più</a>.
                 </div>
             </div>
-            <!-- UDP -->
             <div class="list-group-item">
                 <span class="term" onclick="toggleDefinition('udp-definition')"><strong>UDP:</strong></span>
                 <div id="udp-definition" class="definition-box">
@@ -96,7 +105,6 @@
                     <a href="tcp-udp.html">Scopri di più</a>.
                 </div>
             </div>
-            <!-- FMTP -->
             <div class="list-group-item">
                 <span class="term" onclick="toggleDefinition('fmtp-definition')"><strong>FMTP:</strong></span>
                 <div id="fmtp-definition" class="definition-box">
@@ -104,7 +112,6 @@
                     <a href="#">Esplora</a>.
                 </div>
             </div>
-            <!-- STP -->
             <div class="list-group-item">
                 <span class="term" onclick="toggleDefinition('stp-definition')"><strong>STP:</strong></span>
                 <div id="stp-definition" class="definition-box">
@@ -112,7 +119,6 @@
                     <a href="#">Approfondisci</a>.
                 </div>
             </div>
-            <!-- Altri Termini -->
             <div class="list-group-item">
                 <span class="term" onclick="toggleDefinition('dns-definition')"><strong>DNS:</strong></span>
                 <div id="dns-definition" class="definition-box">

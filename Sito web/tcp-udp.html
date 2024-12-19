@@ -1,45 +1,50 @@
 <!DOCTYPE html>
-<html lang="it">
-
+<html lang="it"> <!-- Inizio del documento HTML, con lingua impostata su Italiano -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TCP vs UDP</title>
-    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8"> <!-- Imposta la codifica dei caratteri su UTF-8 per supportare caratteri speciali -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Assicura la responsività su dispositivi mobili -->
+    <title>TCP vs UDP</title> <!-- Titolo della pagina che sarà visibile nella scheda del browser -->
+    <!-- Link a Bootstrap CSS tramite CDN per stili e componenti predefiniti -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link a FontAwesome per le icone -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Link al file CSS personalizzato (style.css) -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Barra di navigazione, utilizza Bootstrap per la responsività -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
+            <!-- Logo della barra di navigazione -->
             <a class="navbar-brand" href="index.html">Networking</a>
+            <!-- Bottone per mobile per togglare il menu di navigazione -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Menu di navigazione -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="socket.html">Socket</a></li>
-                    <li class="nav-item"><a class="nav-link" href="osi.html">Modello OSI</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="tcp-udp.html">TCP vs UDP</a></li>
-                    <li class="nav-item"><a class="nav-link" href="glossario.html">Glossario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> <!-- Link alla pagina Home -->
+                    <li class="nav-item"><a class="nav-link" href="socket.html">Socket</a></li> <!-- Link alla pagina Socket -->
+                    <li class="nav-item"><a class="nav-link" href="osi.html">Modello OSI</a></li> <!-- Link alla pagina OSI -->
+                    <li class="nav-item"><a class="nav-link active" href="tcp-udp.html">TCP vs UDP</a></li> <!-- Link alla pagina corrente, con classe active per stilizzazione -->
+                    <li class="nav-item"><a class="nav-link" href="glossario.html">Glossario</a></li> <!-- Link al glossario -->
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
+    <!-- Contenuto principale -->
     <main class="container my-5">
-        <h1 class="display-4 text-center mb-4">TCP vs UDP</h1>
+        <h1 class="display-4 text-center mb-4">TCP vs UDP</h1> <!-- Titolo della pagina -->
         <p class="lead text-center">
             TCP (Transmission Control Protocol) e UDP (User Datagram Protocol) sono due dei protocolli di trasporto più utilizzati nelle comunicazioni di rete.
             Entrambi operano al livello di trasporto del modello OSI, ma differiscono significativamente in termini di affidabilità e prestazioni.
         </p>
 
-        <!-- TCP Section -->
+        <!-- Sezione dedicata a TCP -->
         <section>
             <h2 class="my-4">Cos'è TCP?</h2>
             <div class="row">
@@ -57,12 +62,13 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
+                    <!-- GIF animata che mostra il funzionamento di TCP -->
                     <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240226095336/TCP-Gif.gif" alt="TCP Diagram" class="img-fluid rounded shadow">
                 </div>
             </div>
         </section>
 
-        <!-- UDP Section -->
+        <!-- Sezione dedicata a UDP -->
         <section>
             <h2 class="my-4">Cos'è UDP?</h2>
             <div class="row">
@@ -78,12 +84,13 @@
                     </ul>
                 </div>
                 <div class="col-md-6">
+                    <!-- GIF animata che mostra il funzionamento di UDP -->
                     <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240226104348/UDP-gif.gif" alt="UDP Diagram" class="img-fluid rounded shadow">
                 </div>
             </div>
         </section>
 
-        <!-- TCP vs UDP Comparison -->
+        <!-- Sezione di confronto tra TCP e UDP -->
         <section class="bg-light p-4 rounded shadow-lg my-5">
             <h2 class="text-center mb-4">Confronto tra TCP e UDP</h2>
             <div class="row">
@@ -106,7 +113,7 @@
             </div>
         </section>
 
-        <!-- Usage Examples -->
+        <!-- Esempi di utilizzo di TCP e UDP -->
         <h2 class="my-4">Quando usare TCP o UDP?</h2>
         <p class="lead">
             La scelta tra TCP e UDP dipende dal tipo di applicazione:
@@ -134,14 +141,13 @@
     <!-- Footer (come originale) -->
     <footer class="text-center py-3">
         <p>A cura di Xiaqiang Qiu - Classe 5F Informatica - ITIS</p>
-        <p id="last-update"></p>
+        <p id="last-update"></p> <!-- Data di ultimo aggiornamento -->
     </footer>
 
-    <!-- Bootstrap Bundle -->
+    <!-- Inclusione dei file JavaScript necessari -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- FontAwesome Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-    <!-- Custom JS -->
+    <!-- Script personalizzato per aggiornare la data -->
     <script>
         document.getElementById('last-update').innerText = `Ultimo aggiornamento: ${new Date().toLocaleDateString()}`;
     </script>

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socket</title>
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS per la gestione del layout e dei componenti -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <!-- CSS personalizzato (style.css) -->
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Corpo pagina con flexbox */
+        /* Corpo della pagina con flexbox per la gestione del layout */
         body {
             display: flex;
             flex-direction: column;
@@ -21,6 +21,7 @@
             flex: 1; /* Permette al main di espandersi per occupare spazio disponibile */
         }
 
+        /* Immagini delle socket responsive */
         .socket-img {
             width: 100%;
             height: auto;
@@ -47,13 +48,15 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Navbar: Barra di navigazione in alto -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
+            <!-- Logo e link alla home -->
             <a class="navbar-brand" href="index.html">Socket Info</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Menu di navigazione -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -66,14 +69,15 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
+    <!-- Contenuto principale della pagina -->
     <main class="container my-5">
+        <!-- Intestazione della sezione principale -->
         <div class="text-center mb-5">
             <h1 class="display-4">Socket</h1>
             <p class="lead">Una guida alle socket e alle loro applicazioni nei protocolli TCP e UDP.</p>
         </div>
 
-        <!-- Sezione introduttiva -->
+        <!-- Sezione introduttiva su cosa sono le socket -->
         <section class="content-section">
             <h2 class="mb-4">Cosa sono le Socket?</h2>
             <p>
@@ -81,10 +85,11 @@
             </p>
         </section>
 
-        <!-- Sezione Tipi di Socket -->
+        <!-- Sezione che descrive i tipi di socket (TCP e UDP) -->
         <section class="my-5">
             <h2 class="text-center mb-4">Tipi di Socket</h2>
             <div class="row">
+                <!-- Socket TCP -->
                 <div class="col-md-6">
                     <div class="card h-100 shadow-sm">
                         <img src="https://www.researchgate.net/profile/Md-Rafiul-Kabir/publication/370038185/figure/fig6/AS:11431281187704255@1694363201841/TCP-client-server-socket-flow.jpg" class="card-img-top socket-img" alt="Socket TCP">
@@ -101,6 +106,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Socket UDP -->
                 <div class="col-md-6">
                     <div class="card h-100 shadow-sm">
                         <img src="https://pythontic.com/udp-client-server-overview.png" class="card-img-top socket-img" alt="Socket UDP">
@@ -120,7 +126,7 @@
             </div>
         </section>
 
-        <!-- Sezione funzionamento -->
+        <!-- Sezione che descrive come funzionano le socket -->
         <section class="content-section">
             <h2 class="mb-4">Come Funzionano le Socket?</h2>
             <ol>
@@ -131,25 +137,25 @@
             </ol>
         </section>
 
-        <!-- Diagramma -->
+        <!-- Sezione con il diagramma di comunicazione delle socket -->
         <section class="text-center my-5">
             <h2 class="mb-4">Diagramma di Comunicazione</h2>
             <img src="https://www.cybersecurityup.it/images/pillole/rooms.png" alt="Diagramma Socket" class="img-fluid shadow-lg" data-bs-toggle="tooltip" title="Socket Communication">
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer con informazioni sull'autore e l'ultimo aggiornamento -->
     <footer class="text-center py-3">
         <p>A cura di Xiaqiang Qiu - Classe 5F Informatica - ITIS "VIOLA MARCHESINI"</p>
         <p id="last-update">Ultimo aggiornamento: 18/12/2024</p>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- Inclusione di Bootstrap JS per funzionalità interattive -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Tooltip Script -->
+    <!-- Script per impostare dinamicamente la data dell'ultimo aggiornamento -->
     <script>
-        // Impostiamo la data dell'ultimo aggiornamento
+        // Impostiamo la data dell'ultimo aggiornamento nel footer
         document.getElementById('last-update').innerText = `Ultimo aggiornamento: ${new Date().toLocaleDateString()}`;
     </script>
 </body>
