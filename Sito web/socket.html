@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Corpo pagina con flexbox */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* La pagina copre tutta la finestra */
+            margin: 0;
+        }
+
+        main {
+            flex: 1; /* Permette al main di espandersi per occupare spazio disponibile */
+        }
+
+        .socket-img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .content-section {
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        /* Modifica colore dell'ultimo aggiornamento in bianco */
+        #last-update {
+            color: white;
+        }
+
+        /* Footer sempre in fondo */
+        footer {
+            margin-top: auto;
+            background-color: #343a40;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Socket Info</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="socket.html">Socket</a></li>
+                    <li class="nav-item"><a class="nav-link" href="osi.html">Modello OSI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tcp-udp.html">TCP vs UDP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="glossario.html">Glossario</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4">Socket</h1>
+            <p class="lead">Una guida alle socket e alle loro applicazioni nei protocolli TCP e UDP.</p>
+        </div>
+
+        <!-- Sezione introduttiva -->
+        <section class="content-section">
+            <h2 class="mb-4">Cosa sono le Socket?</h2>
+            <p>
+                Le <strong>socket</strong> sono un meccanismo fondamentale per la comunicazione in rete. Esse permettono a due dispositivi di scambiare dati tramite protocolli come <strong>TCP</strong> e <strong>UDP</strong>.
+            </p>
+        </section>
+
+        <!-- Sezione Tipi di Socket -->
+        <section class="my-5">
+            <h2 class="text-center mb-4">Tipi di Socket</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://www.researchgate.net/profile/Md-Rafiul-Kabir/publication/370038185/figure/fig6/AS:11431281187704255@1694363201841/TCP-client-server-socket-flow.jpg" class="card-img-top socket-img" alt="Socket TCP">
+                        <div class="card-body">
+                            <h5 class="card-title">Socket TCP</h5>
+                            <p class="card-text">
+                                Sono <strong>affidabili</strong> e basate su connessione, assicurando una trasmissione dei dati sicura e ordinata.
+                            </p>
+                            <ul>
+                                <li>Orientate alla connessione</li>
+                                <li>Affidabili</li>
+                                <li>Controllo flusso e congestione</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://pythontic.com/udp-client-server-overview.png" class="card-img-top socket-img" alt="Socket UDP">
+                        <div class="card-body">
+                            <h5 class="card-title">Socket UDP</h5>
+                            <p class="card-text">
+                                Sono <strong>veloci</strong> ma non garantiscono l'affidabilità, ideali per applicazioni in tempo reale.
+                            </p>
+                            <ul>
+                                <li>Non orientate alla connessione</li>
+                                <li>Veloci</li>
+                                <li>Non affidabili</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione funzionamento -->
+        <section class="content-section">
+            <h2 class="mb-4">Come Funzionano le Socket?</h2>
+            <ol>
+                <li><strong>Creazione:</strong> Si crea una socket per inviare/ricevere dati.</li>
+                <li><strong>Connessione:</strong> (Solo TCP) È necessario un handshake tra client e server.</li>
+                <li><strong>Comunicazione:</strong> I dati vengono trasmessi in modalità bidirezionale.</li>
+                <li><strong>Chiusura:</strong> La connessione viene chiusa per liberare risorse.</li>
+            </ol>
+        </section>
+
+        <!-- Diagramma -->
+        <section class="text-center my-5">
+            <h2 class="mb-4">Diagramma di Comunicazione</h2>
+            <img src="https://www.cybersecurityup.it/images/pillole/rooms.png" alt="Diagramma Socket" class="img-fluid shadow-lg" data-bs-toggle="tooltip" title="Socket Communication">
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p>A cura di Xiaqiang Qiu - Classe 5F Informatica - ITIS "VIOLA MARCHESINI"</p>
+        <p id="last-update">Ultimo aggiornamento: 18/12/2024</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Tooltip Script -->
+    <script>
+        // Impostiamo la data dell'ultimo aggiornamento
+        document.getElementById('last-update').innerText = `Ultimo aggiornamento: ${new Date().toLocaleDateString()}`;
+    </script>
+</body>
+</html>

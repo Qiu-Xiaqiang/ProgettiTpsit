@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCP vs UDP</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Networking</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="socket.html">Socket</a></li>
+                    <li class="nav-item"><a class="nav-link" href="osi.html">Modello OSI</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="tcp-udp.html">TCP vs UDP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="glossario.html">Glossario</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <h1 class="display-4 text-center mb-4">TCP vs UDP</h1>
+        <p class="lead text-center">
+            TCP (Transmission Control Protocol) e UDP (User Datagram Protocol) sono due dei protocolli di trasporto più utilizzati nelle comunicazioni di rete.
+            Entrambi operano al livello di trasporto del modello OSI, ma differiscono significativamente in termini di affidabilità e prestazioni.
+        </p>
+
+        <!-- TCP Section -->
+        <section>
+            <h2 class="my-4">Cos'è TCP?</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>
+                        TCP è un protocollo orientato alla connessione, il che significa che prima che i dati vengano trasmessi, viene stabilita una connessione tra il mittente e il destinatario.
+                        TCP garantisce che i dati vengano inviati correttamente, offrendo il controllo degli errori, l'ordinamento dei pacchetti e il controllo del flusso.
+                    </p>
+                    <h3>Caratteristiche di TCP</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Affidabilità: Assicura che i dati vengano ricevuti correttamente.</li>
+                        <li><i class="fas fa-check-circle"></i> Connessione: Richiede una connessione tra il mittente e il destinatario.</li>
+                        <li><i class="fas fa-check-circle"></i> Controllo degli errori: Gestisce la verifica degli errori e la ritrasmissione dei pacchetti mancanti.</li>
+                        <li><i class="fas fa-check-circle"></i> Controllo del flusso: Regola la velocità di invio dei pacchetti per evitare congestionamenti.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240226095336/TCP-Gif.gif" alt="TCP Diagram" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </section>
+
+        <!-- UDP Section -->
+        <section>
+            <h2 class="my-4">Cos'è UDP?</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>
+                        UDP è un protocollo senza connessione, il che significa che i dati possono essere inviati senza stabilire una connessione preventiva. Non garantisce l'affidabilità né il controllo degli errori.
+                    </p>
+                    <h3>Caratteristiche di UDP</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Velocità: Poiché non richiede una connessione, è generalmente più veloce di TCP.</li>
+                        <li><i class="fas fa-check-circle"></i> Affidabilità: Non garantisce che i pacchetti vengano ricevuti correttamente.</li>
+                        <li><i class="fas fa-check-circle"></i> Non ha controllo del flusso o gestione degli errori.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240226104348/UDP-gif.gif" alt="UDP Diagram" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </section>
+
+        <!-- TCP vs UDP Comparison -->
+        <section class="bg-light p-4 rounded shadow-lg my-5">
+            <h2 class="text-center mb-4">Confronto tra TCP e UDP</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>TCP</h4>
+                    <ul>
+                        <li><i class="fas fa-arrow-right"></i> Affidabilità</li>
+                        <li><i class="fas fa-arrow-right"></i> Connessione stabilita</li>
+                        <li><i class="fas fa-arrow-right"></i> Lento a causa di più controlli</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>UDP</h4>
+                    <ul>
+                        <li><i class="fas fa-arrow-right"></i> Velocità</li>
+                        <li><i class="fas fa-arrow-right"></i> Nessuna connessione preventiva</li>
+                        <li><i class="fas fa-arrow-right"></i> Meno affidabile</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage Examples -->
+        <h2 class="my-4">Quando usare TCP o UDP?</h2>
+        <p class="lead">
+            La scelta tra TCP e UDP dipende dal tipo di applicazione:
+        </p>
+        <div class="row">
+            <div class="col-md-6">
+                <h5><strong>TCP:</strong></h5>
+                <ul>
+                    <li>Trasferimento di file (FTP)</li>
+                    <li>Web browsing (HTTP)</li>
+                    <li>Invio e-mail (SMTP)</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h5><strong>UDP:</strong></h5>
+                <ul>
+                    <li>Streaming video</li>
+                    <li>Giochi online</li>
+                    <li>Telefonate VoIP</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (come originale) -->
+    <footer class="text-center py-3">
+        <p>A cura di Xiaqiang Qiu - Classe 5F Informatica - ITIS</p>
+        <p id="last-update"></p>
+    </footer>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FontAwesome Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        document.getElementById('last-update').innerText = `Ultimo aggiornamento: ${new Date().toLocaleDateString()}`;
+    </script>
+</body>
+
+</html>

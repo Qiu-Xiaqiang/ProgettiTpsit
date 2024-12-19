@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domande Aperte - Informatica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="page2.html" class="nav-link">Seleziona la Sezione</a>
+    </nav>
+
+    <!-- Contenitore principale per il contenuto -->
+    <div class="content-wrapper">
+        <!-- Header -->
+        <header class="header page-header">
+            <h1>Domande Aperte - Informatica</h1>
+            <p>Scrivi la tua risposta e clicca "Procedi" per continuare.</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div id="question-box">
+                <p id="question-text">Caricamento domanda...</p>
+                <textarea id="answer-text" rows="4" cols="50" required></textarea>
+            </div>
+
+            <div class="button-container">
+                <button id="next-button" class="btn green-btn">Procedi</button>
+                <button id="finish-button" class="btn red-btn" style="display: none;">Termina il Test</button>
+            </div>
+        </main>
+    </div>
+
+    <div id="timer" class="timer">60:00</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Test Platform | Design by Xiaqiang Qiu</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

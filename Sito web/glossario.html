@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossario - Socket Info</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Impostazioni di base per il layout della pagina */
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Content will take the remaining space between the header and footer */
+        main {
+            flex: 1;
+        }
+
+        .definition-box {
+            display: none;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .term:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        /* Navbar style */
+        .navbar {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Socket Info</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="socket.html">Socket</a></li>
+                    <li class="nav-item"><a class="nav-link" href="osi.html">Modello OSI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tcp-udp.html">TCP vs UDP</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="glossario.html">Glossario</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <h1 class="text-center mb-4">Glossario</h1>
+        <p class="text-muted text-center">Clicca su un termine per visualizzare una breve definizione.</p>
+        <div class="list-group">
+            <!-- Socket -->
+            <div class="list-group-item">
+                <span class="term" onclick="toggleDefinition('socket-definition')"><strong>Socket:</strong></span>
+                <div id="socket-definition" class="definition-box">
+                    Endpoint per la comunicazione di rete che consente a due dispositivi di scambiarsi dati in rete. 
+                    <a href="socket.html">Approfondisci</a>.
+                </div>
+            </div>
+            <!-- Modello OSI -->
+            <div class="list-group-item">
+                <span class="term" onclick="toggleDefinition('osi-definition')"><strong>Modello OSI:</strong></span>
+                <div id="osi-definition" class="definition-box">
+                    Struttura teorica a 7 livelli che descrive le funzioni della comunicazione di rete. 
+                    Ogni livello rappresenta un aspetto della trasmissione dati, dal fisico all'applicativo. 
+                    <a href="osi.html">Leggi di più</a>.
+                </div>
+            </div>
+            <!-- TCP -->
+            <div class="list-group-item">
+                <span class="term" onclick="toggleDefinition('tcp-definition')"><strong>TCP:</strong></span>
+                <div id="tcp-definition" class="definition-box">
+                    Protocollo di rete affidabile, orientato alla connessione, utilizzato per trasferire dati in modo sicuro. 
+                    <a href="tcp-udp.html">Leggi di più</a>.
+                </div>
+            </div>
+            <!-- UDP -->
+            <div class="list-group-item">
+                <span class="term" onclick="toggleDefinition('udp-definition')"><strong>UDP:</strong></span>
+                <div id="udp-definition" class="definition-box">
+                    Protocollo veloce e non affidabile, ideale per applicazioni che richiedono velocità, come video in streaming. 
+                    <a href="tcp-udp.html">Scopri di più</a>.
+                </div>
+            </div>
+            <!-- FMTP -->
+            <div class="list-group-item">
+                <span class="term" onclick="toggleDefinition('fmtp-definition')"><strong>FMTP:</strong></span>
+                <div id="fmtp-definition" class="definition-box">
+                    File Transfer Management Protocol, un protocollo usato per la gestione e il trasferimento di file in reti. 
+                    <a href="#">Esplora</a>.
+                </div>
+            </div>
+            <!-- STP -->
+            <div class="list-group-item">
+                <span class="term" onclick="toggleDefinition('stp-definition')"><strong>STP:</strong></span>
+                <div id="stp-definition" class="definition-box">
+                    Spanning Tree Protocol, un protocollo di rete utilizzato per prevenire loop nei sistemi Ethernet. 
+                    <a href="#">Approfondisci</a>.
+                </div>
+            </div>
+            <!-- Altri Termini -->
+            <div class="list-group-item">
+                <span class="term" onclick="toggleDefinition('dns-definition')"><strong>DNS:</strong></span>
+                <div id="dns-definition" class="definition-box">
+                    Domain Name System, un sistema che traduce i nomi di dominio (es. www.google.com) in indirizzi IP. 
+                    <a href="#">Approfondisci</a>.
+                </div>
+            </div>
+            <div class="list-group-item">
+                <span class="term" onclick="toggleDefinition('database-definition')"><strong>Database:</strong></span>
+                <div id="database-definition" class="definition-box">
+                    Sistema organizzato per la memorizzazione e gestione dei dati, spesso usato nelle applicazioni software. 
+                    <a href="#">Scopri di più</a>.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 bg-dark text-light">
+        <p>A cura di Xiaqiang Qiu - Classe 5F Informatica - ITIS "VIOLA MARCHESINI"</p>
+        <p id="last-update"></p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Funzione per alternare la visualizzazione della definizione -->
+    <script>
+        function toggleDefinition(id) {
+            const box = document.getElementById(id);
+            box.style.display = box.style.display === "block" ? "none" : "block";
+        }
+
+        // Funzione per aggiornare la data di ultimo aggiornamento nel footer
+        window.onload = function() {
+            var lastUpdate = document.getElementById("last-update");
+            var currentDate = new Date();
+            var formattedDate = currentDate.toLocaleDateString('it-IT', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            lastUpdate.textContent = "Ultimo aggiornamento: " + formattedDate;
+        }
+    </script>
+</body>
+</html>

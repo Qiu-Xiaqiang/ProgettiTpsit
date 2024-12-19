@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket Info - Introduzione</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Aggiungi Flexbox per il layout */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* La pagina copre tutta la finestra */
+            margin: 0;
+        }
+
+        main {
+            flex: 1; /* Permette al main di occupare lo spazio disponibile */
+        }
+
+        .hero {
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            padding: 60px 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            margin-top: auto; /* Spinge il footer verso il fondo */
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Stile per l'ultimo aggiornamento */
+        #last-update {
+            color: white !important; /* Aggiunto !important per sovrascrivere qualsiasi altro stile */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Socket Info</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="socket.html">Socket</a></li>
+                    <li class="nav-item"><a class="nav-link" href="osi.html">Modello OSI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tcp-udp.html">TCP vs UDP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="glossario.html">Glossario</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero text-center">
+        <div class="container">
+            <h1>Benvenuto su Socket Info</h1>
+            <p class="lead">La tua guida definitiva per comprendere le socket, i principi fondamentali delle reti e entrare in contatto con il mondo dell'informatica</p>
+            <a href="socket.html" class="btn btn-light btn-lg">Inizia Ora</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <section class="text-center mb-5">
+            <h2 class="fw-bold">Esplora i Nostri Contenuti</h2>
+            <p class="text-muted">Dai concetti di base alle tecnologie avanzate, abbiamo tutto ciò che ti serve per comprendere meglio le reti informatiche.</p>
+        </section>
+        
+        <!-- Card Section -->
+        <section>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Cosa sono le Socket?</h5>
+                            <p class="card-text">Comprendi il ruolo fondamentale delle socket nella comunicazione tra dispositivi in rete.</p>
+                            <a href="socket.html" class="btn btn-primary">Scopri di più</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Modello OSI</h5>
+                            <p class="card-text">Esplora i sette livelli del modello OSI, il framework teorico delle comunicazioni di rete.</p>
+                            <a href="osi.html" class="btn btn-primary">Leggi di più</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">TCP vs UDP</h5>
+                            <p class="card-text">Confronta i due protocolli più utilizzati nelle reti e scopri le loro differenze.</p>
+                            <a href="tcp-udp.html" class="btn btn-primary">Approfondisci</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <div class="container">
+            <p>A cura di <span class="fw-bold">Xiaqiang Qiu</span> - Classe 5F Informatica - ITIS "VIOLA MARCHESINI"</p>
+            <p id="last-update"></p>
+            <div>
+                <a href="index.html" class="text-light footer-link me-3">Home</a>
+                <a href="socket.html" class="text-light footer-link me-3">Socket</a>
+                <a href="osi.html" class="text-light footer-link">Modello OSI</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Last Update Script -->
+    <script>
+        document.getElementById('last-update').textContent = `Ultimo aggiornamento: ${new Date().toLocaleDateString()}`;
+    </script>
+</body>
+</html>
