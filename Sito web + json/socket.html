@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Corpo pagina con flexbox */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* La pagina copre tutta la finestra */
+            margin: 0;
+        }
+
+        main {
+            flex: 1; /* Permette al main di espandersi per occupare spazio disponibile */
+        }
+
+        .socket-img {
+            width: 100%; /* Fa sì che le immagini siano larghe quanto la colonna */
+            height: auto; /* Mantiene le proporzioni dell'immagine */
+            margin-bottom: 20px;
+        }
+
+        .content-section {
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        /* Modifica colore dell'ultimo aggiornamento in bianco */
+        #last-update {
+            color: white;
+        }
+
+        /* Footer sempre in fondo */
+        footer {
+            margin-top: auto;
+            background-color: #343a40;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Socket Info</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="socket.html">Socket</a></li>
+                    <li class="nav-item"><a class="nav-link" href="osi.html">Modello OSI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tcp-udp.html">TCP vs UDP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="glossario.html">Glossario</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4">Socket</h1>
+            <p class="lead">Una guida alle socket e alle loro applicazioni nei protocolli TCP e UDP.</p>
+        </div>
+
+        <!-- Sezione introduttiva -->
+        <section class="content-section">
+            <h2 class="mb-4" id="introduzione-titolo">Cosa sono le Socket?</h2>
+            <p id="introduzione-descrizione">
+                Le <strong>socket</strong> sono un meccanismo fondamentale per la comunicazione in rete. Esse permettono a due dispositivi di scambiare dati tramite protocolli come <strong>TCP</strong> e <strong>UDP</strong>.
+            </p>
+        </section>
+
+        <!-- Sezione Tipi di Socket -->
+        <section class="my-5" id="tipi-socket-section">
+            <h2 class="text-center mb-4">Tipi di Socket</h2>
+            <div class="row justify-content-center" id="tipi-socket-row">
+                <!-- Le card dei tipi di socket verranno caricate dinamicamente da script4.js -->
+            </div>
+        </section>
+
+        <!-- Sezione funzionamento -->
+        <section class="content-section">
+            <h2 class="mb-4">Come Funzionano le Socket?</h2>
+            <ol id="funzionamento-list">
+                <!-- Gli step del funzionamento verranno caricati dinamicamente da script4.js -->
+            </ol>
+        </section>
+
+        <!-- Diagramma -->
+        <section class="text-center my-5">
+            <h2 class="mb-4">Diagramma di Comunicazione</h2>
+            <img src="https://www.cybersecurityup.it/images/pillole/rooms.png" alt="Diagramma Socket" class="img-fluid shadow-lg" data-bs-toggle="tooltip" title="Socket Communication">
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p>A cura di Xiaqiang Qiu - Classe 5F Informatica - ITIS "VIOLA MARCHESINI"</p>
+        <p id="last-update">Ultimo aggiornamento: 18/12/2024</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Tooltip Script -->
+    <script>
+        // Impostiamo la data dell'ultimo aggiornamento
+        document.getElementById('last-update').innerText = `Ultimo aggiornamento: ${new Date().toLocaleDateString()}`;
+    </script>
+
+    <!-- Script per caricare dinamicamente i contenuti -->
+    <script src="script4.js"></script>
+</body>
+</html>

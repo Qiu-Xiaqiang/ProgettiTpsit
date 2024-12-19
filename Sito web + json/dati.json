@@ -1,0 +1,45 @@
+{
+    "navbar": {
+        "home": "Home",
+        "socket": "Socket",
+        "osi": "Modello OSI",
+        "tcpUdp": "TCP vs UDP",
+        "glossary": "Glossario"
+    },
+    "hero": {
+        "title": "Benvenuto su Socket Info",
+        "lead": "La tua guida definitiva per comprendere le socket, i principi fondamentali delle reti e entrare in contatto con il mondo dell'informatica",
+        "cta": "Inizia Ora"
+    },
+    "main": {
+        "sectionTitle": "Esplora i Nostri Contenuti",
+        "sectionDescription": "Dai concetti di base alle tecnologie avanzate, abbiamo tutto ciò che ti serve per comprendere meglio le reti informatiche."
+    },
+    "cards": [
+        {
+            "title": "Cosa sono le Socket?",
+            "text": "Comprendi il ruolo fondamentale delle socket nella comunicazione tra dispositivi in rete.",
+            "button": "Scopri di più",
+            "link": "socket.html"
+        },
+        {
+            "title": "Modello OSI",
+            "text": "Esplora i sette livelli del modello OSI, il framework teorico delle comunicazioni di rete.",
+            "button": "Leggi di più",
+            "link": "osi.html"
+        },
+        {
+            "title": "TCP vs UDP",
+            "text": "Confronta i due protocolli più utilizzati nelle reti e scopri le loro differenze.",
+            "button": "Approfondisci",
+            "link": "tcp-udp.html"
+        }
+    ],
+    "footer": {
+        "author": "Xiaqiang Qiu",
+        "class": "Classe 5F Informatica - ITIS \"VIOLA MARCHESINI\"",
+        "home": "Home",
+        "socket": "Socket",
+        "osi": "Modello OSI"
+    }
+}

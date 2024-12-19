@@ -1,0 +1,11 @@
+{
+    "socket": "Il socket è un punto di comunicazione per il trasferimento di dati tra due dispositivi attraverso una rete. Un socket combina un indirizzo IP e un numero di porta.",
+    "osi": "Il modello OSI (Open Systems Interconnection) è una struttura di riferimento che descrive come i dati vengono trasmessi in una rete di telecomunicazioni in sette livelli.",
+    "tcp": "TCP (Transmission Control Protocol) è un protocollo di comunicazione che garantisce la consegna affidabile dei pacchetti di dati tra il mittente e il destinatario.",
+    "udp": "UDP (User Datagram Protocol) è un protocollo di comunicazione che invia pacchetti di dati senza garantire la loro consegna affidabile.",
+    "fmtp": "FMTP (Format Parameters) è un protocollo che specifica i parametri di formattazione per il trasporto di media in tempo reale.",
+    "stp": "STP (Spanning Tree Protocol) è un protocollo utilizzato nelle reti Ethernet per prevenire loop di rete creando una struttura ad albero.",
+    "dns": "DNS (Domain Name System) è un sistema che traduce i nomi di dominio leggibili in indirizzi IP numerici.",
+    "database": "Un database è un sistema di gestione delle informazioni in formato elettronico, che consente l'archiviazione, la ricerca e l'elaborazione dei dati."
+  }
+  

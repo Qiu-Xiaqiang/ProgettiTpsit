@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+}
+
+.nav-link {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffc107;
+}
+
+.header, .hero {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+footer p {
+    margin: 0;
+}
+/* Corpo pagina con flexbox */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+.socket-img {
+    width: 100%;   /* Fa sì che le immagini siano larghe quanto la colonna */
+    height: auto;  /* Mantiene le proporzioni dell'immagine */
+    margin-bottom: 20px;
+}
+
+.content-section {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+/* Modifica colore dell'ultimo aggiornamento in bianco */
+#last-update {
+    color: white;
+}
+
+/* Footer sempre in fondo */
+footer {
+    margin-top: auto;
+    background-color: #343a40;
+    color: white;
+}
+

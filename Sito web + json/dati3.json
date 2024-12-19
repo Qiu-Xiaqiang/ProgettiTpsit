@@ -1,0 +1,49 @@
+{
+    "intro": {
+        "titolo": "Il Modello OSI",
+        "paragrafo": "Il Modello OSI (Open Systems Interconnection) è un modello concettuale che descrive come i dati viaggiano da un'applicazione a una rete di comunicazione. Il modello è suddiviso in sette livelli, ciascuno dei quali gestisce una parte specifica della comunicazione di rete."
+    },
+    "livelli": [
+        {
+            "titolo": "Livello 1 - Fisico",
+            "descrizione": "Gestisce la trasmissione fisica dei dati attraverso il canale di comunicazione, come cavi e segnali elettrici. È la base fisica della rete."
+        },
+        {
+            "titolo": "Livello 2 - Collegamento Dati",
+            "descrizione": "Gestisce la comunicazione tra dispositivi sulla stessa rete, l'accesso al mezzo fisico e l'indirizzamento tramite il MAC (Media Access Control)."
+        },
+        {
+            "titolo": "Livello 3 - Rete",
+            "descrizione": "Gestisce l'instradamento dei pacchetti tra diverse reti e fornisce l'indirizzamento logico, come gli indirizzi IP."
+        },
+        {
+            "titolo": "Livello 4 - Trasporto",
+            "descrizione": "Garantisce il trasferimento dei dati in modo affidabile tra il mittente e il destinatario, con il controllo degli errori e del flusso (es. TCP)."
+        },
+        {
+            "titolo": "Livello 5 - Sessione",
+            "descrizione": "Gestisce le sessioni di comunicazione tra applicazioni, coordinando l'apertura, il mantenimento e la chiusura della comunicazione."
+        },
+        {
+            "titolo": "Livello 6 - Presentazione",
+            "descrizione": "Si occupa della rappresentazione e formattazione dei dati, come la codifica e la compressione (es. formati JPEG, video, ecc.)."
+        },
+        {
+            "titolo": "Livello 7 - Applicazione",
+            "descrizione": "Il livello più alto, che fornisce i servizi di rete all'utente finale, come il trasferimento di file, la posta elettronica, e la navigazione web."
+        }
+    ],
+    "conclusione": {
+        "titolo": "Conclusioni",
+        "paragrafo": "Il modello OSI è fondamentale per comprendere come le reti comunicano tra loro e come possiamo progettare sistemi che funzionano in modo affidabile su diverse tecnologie e protocolli."
+    },
+    "processo_comunicazione": [
+        "Il livello applicazione prepara i dati e li passa al livello presentazione.",
+        "Il livello presentazione converte i dati nel formato giusto e li invia al livello sessione.",
+        "Il livello sessione stabilisce la connessione e la mantiene attiva durante il trasferimento.",
+        "Il livello trasporto segmenta i dati in pacchetti e si assicura che arrivino correttamente al destinatario.",
+        "Il livello rete si occupa dell'instradamento dei pacchetti attraverso la rete.",
+        "Il livello collegamento dati controlla l'accesso al canale fisico e assicura che i dati vengano inviati correttamente.",
+        "Infine, il livello fisico trasmette i segnali sulla rete fisica."
+    ]
+}

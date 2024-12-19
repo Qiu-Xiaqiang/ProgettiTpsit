@@ -1,0 +1,58 @@
+{
+    "intro-text": "TCP (Transmission Control Protocol) e UDP (User Datagram Protocol) sono due dei protocolli di trasporto più utilizzati nelle comunicazioni di rete. Entrambi operano al livello di trasporto del modello OSI, ma differiscono significativamente in termini di affidabilità e prestazioni.",
+    "tcp": {
+        "title": "Cos'è TCP?",
+        "description": "TCP è un protocollo orientato alla connessione, il che significa che prima che i dati vengano trasmessi, viene stabilita una connessione tra il mittente e il destinatario. TCP garantisce che i dati vengano inviati correttamente, offrendo il controllo degli errori, l'ordinamento dei pacchetti e il controllo del flusso.",
+        "features-title": "Caratteristiche di TCP",
+        "features": [
+            "Affidabilità: Assicura che i dati vengano ricevuti correttamente.",
+            "Connessione: Richiede una connessione tra il mittente e il destinatario.",
+            "Controllo degli errori: Gestisce la verifica degli errori e la ritrasmissione dei pacchetti mancanti.",
+            "Controllo del flusso: Regola la velocità di invio dei pacchetti per evitare congestionamenti."
+        ],
+        "image": "https://media.geeksforgeeks.org/wp-content/uploads/20240226095336/TCP-Gif.gif"
+    },
+    "udp": {
+        "title": "Cos'è UDP?",
+        "description": "UDP è un protocollo senza connessione, il che significa che i dati possono essere inviati senza stabilire una connessione preventiva. Non garantisce l'affidabilità né il controllo degli errori.",
+        "features-title": "Caratteristiche di UDP",
+        "features": [
+            "Velocità: Poiché non richiede una connessione, è generalmente più veloce di TCP.",
+            "Affidabilità: Non garantisce che i pacchetti vengano ricevuti correttamente.",
+            "Non ha controllo del flusso o gestione degli errori."
+        ],
+        "image": "https://media.geeksforgeeks.org/wp-content/uploads/20240226104348/UDP-gif.gif"
+    },
+    "comparison": {
+        "title": "Confronto tra TCP e UDP",
+        "tcp-comparison-title": "TCP",
+        "tcp-comparison": [
+            "Affidabilità",
+            "Connessione stabilita",
+            "Lento a causa di più controlli"
+        ],
+        "udp-comparison-title": "UDP",
+        "udp-comparison": [
+            "Velocità",
+            "Nessuna connessione preventiva",
+            "Meno affidabile"
+        ]
+    },
+    "usage": {
+        "title": "Quando usare TCP o UDP?",
+        "text": "La scelta tra TCP e UDP dipende dal tipo di applicazione:",
+        "tcp-usage-title": "TCP:",
+        "tcp-usage": [
+            "Trasferimento di file (FTP)",
+            "Web browsing (HTTP)",
+            "Invio e-mail (SMTP)"
+        ],
+        "udp-usage-title": "UDP:",
+        "udp-usage": [
+            "Streaming video",
+            "Giochi online",
+            "Telefonate VoIP"
+        ]
+    },
+    "last-update": "Ultimo aggiornamento: 18/12/2024"
+}

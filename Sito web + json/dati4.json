@@ -1,0 +1,47 @@
+{
+    "introduzione": {
+      "titolo": "Cosa sono le Socket?",
+      "descrizione": "Le socket sono un meccanismo fondamentale per la comunicazione in rete. Esse permettono a due dispositivi di scambiare dati tramite protocolli come TCP e UDP."
+    },
+    "tipiSocket": [
+      {
+        "tipo": "TCP",
+        "immagine": "https://www.researchgate.net/profile/Md-Rafiul-Kabir/publication/370038185/figure/fig6/AS:11431281187704255@1694363201841/TCP-client-server-socket-flow.jpg",
+        "descrizione": "Le socket TCP sono affidabili e basate su connessione, assicurando una trasmissione dei dati sicura e ordinata.",
+        "caratteristiche": [
+          "Orientate alla connessione",
+          "Affidabili",
+          "Controllo flusso e congestione"
+        ]
+      },
+      {
+        "tipo": "UDP",
+        "immagine": "https://pythontic.com/udp-client-server-overview.png",
+        "descrizione": "Le socket UDP sono veloci ma non garantiscono l'affidabilità, ideali per applicazioni in tempo reale.",
+        "caratteristiche": [
+          "Non orientate alla connessione",
+          "Veloci",
+          "Non affidabili"
+        ]
+      }
+    ],
+    "funzionamento": [
+      {
+        "titolo": "Creazione",
+        "descrizione": "Si crea una socket per inviare/ricevere dati."
+      },
+      {
+        "titolo": "Connessione",
+        "descrizione": "(Solo TCP) È necessario un handshake tra client e server."
+      },
+      {
+        "titolo": "Comunicazione",
+        "descrizione": "I dati vengono trasmessi in modalità bidirezionale."
+      },
+      {
+        "titolo": "Chiusura",
+        "descrizione": "La connessione viene chiusa per liberare risorse."
+      }
+    ]
+  }
+  
